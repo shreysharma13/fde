@@ -1,0 +1,12 @@
+{
+  "_doc": "PURPOSE: Trace of one tool call for RCA / healing. USED BY: repositories.add_tool_run.",
+  "type": "object",
+  "required": ["name", "args", "ok"],
+  "properties": {
+    "name": { "type": "string" },
+    "args": { "type": "object" },
+    "result": { "type": "object" },
+    "ok": { "type": "boolean" },
+    "error": { "type": ["string", "null"] }
+  }
+}

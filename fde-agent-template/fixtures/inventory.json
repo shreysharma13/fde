@@ -1,0 +1,5 @@
+{
+  "_doc": "PURPOSE: Fake plant data for services.get_inventory. No real ERP needed.",
+  "VALVE-9": { "qty": 40, "unit": "ea", "location": "Stores-A" },
+  "PUMP-HOUSING": { "qty": 12, "unit": "ea", "location": "Stores-B" }
+}

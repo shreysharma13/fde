@@ -1,0 +1,15 @@
+{
+  "_doc": "PURPOSE: Tool def the model sees. LOADED BY: tools.schemas().",
+  "name": "create_task",
+  "description": "Create an owned, dated follow-up task. Use when a plant commitment needs an owner and due date (e.g. shortage expedite). Do not use to mark work done — use close_task with evidence.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "title": { "type": "string", "description": "Short task title" },
+      "owner": { "type": "string", "description": "Role or person, e.g. purchasing" },
+      "due_at": { "type": "string", "description": "ISO date or YYYY-MM-DD" },
+      "part_id": { "type": "string", "description": "Related part id if any" }
+    },
+    "required": ["title", "owner", "due_at"]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "_doc": "PURPOSE: Tool def the model sees. LOADED BY: tools.schemas(). TASTE: clear when/when-not. RCA: wrong tool choice → edit description here.",
+  "name": "get_inventory",
+  "description": "Return on-hand quantity for an internal part id. Use when stock is uncertain. Do not guess quantities. If part is unknown, the tool returns not_found — do not retry with the same id.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "part_id": {
+        "type": "string",
+        "description": "Internal part id, e.g. VALVE-9"
+      }
+    },
+    "required": ["part_id"]
+  }
+}

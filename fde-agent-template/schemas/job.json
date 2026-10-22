@@ -1,0 +1,15 @@
+{
+  "_doc": "PURPOSE: Shape of a durable job/task. USED BY: repositories, tools.create_task/close_task. RCA: bad saved state → align code with this schema.",
+  "type": "object",
+  "required": ["id", "title", "owner", "due_at", "status"],
+  "properties": {
+    "id": { "type": "string" },
+    "title": { "type": "string" },
+    "owner": { "type": "string" },
+    "due_at": { "type": "string" },
+    "part_id": { "type": ["string", "null"] },
+    "status": { "type": "string", "enum": ["open", "blocked", "closed"] },
+    "evidence_type": { "type": ["string", "null"] },
+    "evidence_ref": { "type": ["string", "null"] }
+  }
+}

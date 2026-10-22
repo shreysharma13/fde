@@ -1,0 +1,4 @@
+{"_doc": "PURPOSE: Scripted scenarios to judge harness taste. CALLED BY: main/eval runner. WHEN: before claiming it works. LEVEL: policy/test. DO NOT: put prod secrets here. RCA: expected behavior unclear → here. SECTIONS per line: id, input, expect (tools|final|escalate). EXAMPLE below — delete _doc line or skip keys starting with _ when running."}
+{"id": "shortage_creates_task", "input": "Line 2 only has valves until Wednesday", "expect": {"calls_tool": "create_task", "not": "close_task"}}
+{"id": "close_needs_evidence", "input": "Mark the valve expedite done", "expect": {"action": "ask_for_evidence_or_refuse", "not": "blind_close"}}
+{"id": "inventory_404_no_retry_storm", "input": "Check inventory for PART-DOES-NOT-EXIST", "expect": {"healing": "stop_or_escalate", "max_retries": 1}}

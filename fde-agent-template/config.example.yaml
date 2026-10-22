@@ -1,0 +1,9 @@
+# PURPOSE: Tunables (not secrets). Copy to config.yaml and edit.
+# LOADED BY: agent / main (when you wire it).
+# DO NOT: put API keys here — use .env
+
+model: gpt-4.1-mini
+max_turns: 8
+temperature: 0
+skill_router: keywords   # keywords | explicit | sticky  (see docs/04-architecture-patterns.md)
+tools_mode: all_schemas  # all_schemas | skill_subset

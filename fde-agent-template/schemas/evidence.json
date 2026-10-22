@@ -1,0 +1,9 @@
+{
+  "_doc": "PURPOSE: What counts as proof to close work.",
+  "type": "object",
+  "required": ["type", "ref"],
+  "properties": {
+    "type": { "type": "string", "enum": ["erp_receipt", "photo_url"] },
+    "ref": { "type": "string" }
+  }
+}

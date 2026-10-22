@@ -1,0 +1,20 @@
+{
+  "_doc": "PURPOSE: Tool def the model sees. LOADED BY: tools.schemas().",
+  "name": "close_task",
+  "description": "Close a task only when proof exists. evidence_type must be erp_receipt or photo_url. Refuse if the user only says 'done' with no evidence_ref. Never invent evidence.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "task_id": { "type": "string" },
+      "evidence_type": {
+        "type": "string",
+        "enum": ["erp_receipt", "photo_url"]
+      },
+      "evidence_ref": {
+        "type": "string",
+        "description": "Receipt id or photo URL"
+      }
+    },
+    "required": ["task_id", "evidence_type", "evidence_ref"]
+  }
+}
